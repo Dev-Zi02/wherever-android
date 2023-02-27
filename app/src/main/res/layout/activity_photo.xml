@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RecordReportActivity">
-
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,30 +26,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/record_title"
                 style="@style/textTitle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="3"
                 android:textAlignment="center"
-                android:text="위치와 신고내용을 \n말해주세요" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="8"
-            android:layout_gravity="center">
-            <ImageView
-                android:id="@+id/aiView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:src="@drawable/recording"
-                android:layout_marginTop="70dp"
-                android:layout_marginBottom="80dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:text="신고하려는 도보의\n사진을 첨부해주세요." />
         </LinearLayout>
 
         <LinearLayout
@@ -61,24 +40,31 @@
             android:layout_weight="6"
             android:orientation="vertical">
             <android.widget.Button
-                android:id="@+id/recordBtn"
+                android:id="@+id/btn_shoot_photo"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
                 style="@style/mainButton"
-                android:text="녹음시작">
+                android:text="사진촬영">
             </android.widget.Button>
 
             <android.widget.Button
-                android:id="@+id/recordPauseBtn"
+                android:id="@+id/btn_add_photo"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight="2"
+                style="@style/mainButton"
+                android:text="사진첨부">
+            </android.widget.Button>
+
+            <android.widget.Button
+                android:id="@+id/btn_pass_photo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
                 style="@style/subButton"
-                android:text="중단하기"
-                android:textSize="@dimen/subTitleTextSize">
+                android:text="건너뛰기">
             </android.widget.Button>
         </LinearLayout>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

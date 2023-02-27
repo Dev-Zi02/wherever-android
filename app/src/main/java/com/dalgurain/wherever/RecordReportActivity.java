@@ -34,7 +34,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RecordActivity extends AppCompatActivity {
+public class RecordReportActivity extends AppCompatActivity {
     Button btnRecord;
     Button btnRecordPause;
 
@@ -68,7 +68,7 @@ public class RecordActivity extends AppCompatActivity {
                 if(isRecording) {
                     isRecording = false;
                     stopRecording();
-                    Intent intent = new Intent(getApplicationContext(), ReportSuccessActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), PhotoActivity.class);
                     startActivity(intent);
                 }
                 else {
@@ -129,14 +129,13 @@ public class RecordActivity extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-//            reportUpload(audioFile, "location from wherever");
+            reportUpload(audioFile, "location from wherever");
         }
         else {
             Toast.makeText(this, "녹음을 먼저 진행해주세요", Toast.LENGTH_SHORT).show();
         }
-//        Intent intent = getIntent();
-//        intent.getStringExtra("longitude");
-//
+        Intent intent = getIntent();
+        intent.getStringExtra("longitude");
 
     }
 
@@ -150,7 +149,7 @@ public class RecordActivity extends AppCompatActivity {
         mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         mediaRecorder.setOutputFile(audioFileName);
         mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-        //Toast.makeText(this, audioFileName, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, audioFileName, Toast.LENGTH_LONG).show();
         try {
             mediaRecorder.prepare();
         } catch (IOException e) {

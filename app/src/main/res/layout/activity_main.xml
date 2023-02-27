@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="69dp"
-                android:text="오늘의 도보민원은 9건"
+                android:text="도보 불편 신고하기"
                 style="@style/textTitle" />
 
             <TextView
@@ -48,21 +48,20 @@
             android:layout_weight="6"
             android:orientation="vertical">
             <android.widget.Button
-                android:id="@+id/btnComplainReport"
+                android:id="@+id/btn_voice_report"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 style="@style/mainButton"
-                android:text="도보 불편 신고하기">
+                android:text="목소리로 말하기">
             </android.widget.Button>
-
             <android.widget.Button
+                android:id="@+id/btn_keyboard_report"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
-                style="@style/subButton"
-                android:text="내 신고 조회하기 "
-                android:textSize="@dimen/subTitleTextSize">
+                android:layout_weight="2"
+                style="@style/mainButton"
+                android:text="키보드로 말하기 ">
             </android.widget.Button>
         </LinearLayout>
         <LinearLayout

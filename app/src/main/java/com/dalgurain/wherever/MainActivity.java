@@ -9,18 +9,28 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn_complain_report;
+    Button btnVoiceReport, btnKeyboardReport;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_complain_report = findViewById(R.id.btnComplainReport);
-        btn_complain_report.setOnClickListener(new View.OnClickListener() {
+        btnVoiceReport = findViewById(R.id.btn_voice_report);
+        btnKeyboardReport = findViewById(R.id.btn_keyboard_report);
+
+        btnVoiceReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), LocationTrackingActivity.class);
+                Intent intent = new Intent(getApplicationContext(), RecordReportActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnKeyboardReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), TextReportActivity.class);
                 startActivity(intent);
             }
         });

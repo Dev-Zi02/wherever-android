@@ -12,6 +12,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="android:colorBackground">@color/background_main</item>
+        <item name="android:textColor">@color/font_main</item>
     </style>
 
     <style name="textTitle">
@@ -25,13 +28,26 @@
         <item name="android:textSize">@dimen/bodyTextSize</item>
     </style>
 
+    <style name="textEditCaption">
+        <item name="android:fontFamily">@font/notosanskr_regular</item>
+        <item name="android:textSize">@dimen/subTitleTextSize</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
     <style name="mainButton">
         <item name="android:background">@drawable/round_main_button</item>
         <item name="android:textSize">@dimen/majorTitleTextSize</item>
+        <item name="android:layout_margin">10dp</item>
     </style>
 
     <style name="subButton">
-        <item name="android:textSize">@dimen/subTitleTextSize</item>
         <item name="android:background">@drawable/round_sub_button</item>
+        <item name="android:textSize">@dimen/subTitleTextSize</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="editText">
+        <item name="android:background">@drawable/edittext_rounded_conner</item>
+        <item name="android:layout_margin">10dp</item>
     </style>
 </resources>

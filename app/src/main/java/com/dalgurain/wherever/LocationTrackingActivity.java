@@ -39,7 +39,7 @@ public class LocationTrackingActivity extends AppCompatActivity {
                 }
                 else {
                     Location locationInfo = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-                    Intent intent = new Intent(getApplicationContext(), RecordActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), RecordReportActivity.class);
                     if(locationInfo != null) {
                         String provider = locationInfo.getProvider();
                         double longitude = locationInfo.getLongitude();
